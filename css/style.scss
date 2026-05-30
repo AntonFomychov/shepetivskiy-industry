@@ -22,7 +22,7 @@
 
 body {
 	position: relative;
-	padding: 0 0 1px;
+	padding: 0; 
 	font-size: 16px;
 	font-family: var(--font-family);
 	font-weight: 400;
@@ -76,6 +76,10 @@ body {
 
     strong {
 		font-weight: 600;
+	}
+
+	em{
+		font-style: italic;
 	}
 }
 
@@ -499,6 +503,10 @@ body {
 
 .about-us-content{
 	display: flex;
+
+	@media(max-width: 991px) {
+		flex-direction: column;
+	}
 }
 
 .about-us-content-section{
@@ -510,6 +518,16 @@ body {
 		inset: 0;
 		z-index: -2;
 		background: var(--202020-record-needle);
+
+		@media(max-width: 991px) {
+			display: none;
+		}
+	}
+
+	.container{
+		@media(max-width: 991px) {
+			padding: 0;
+		}
 	}
 }
 
@@ -520,6 +538,21 @@ body {
 	gap: 50px;
 	padding: 81px 20px 82px 50px;
 	width: 100%;
+
+	@media(max-width: 991px) {
+		position: relative;
+		padding: 50px 20px;
+		border-bottom: 1px solid var(--biliy);
+
+		&:last-child{
+			border: none;
+		}
+	}
+
+	@media(max-width: 500px) {
+		padding: 50px 15px;
+		gap: 30px;
+	}
 
 	&.active{
 		.about-us-item{
@@ -547,6 +580,16 @@ body {
 		padding-left: 0;
 		width: calc(100% - 50px);
 
+		@media(max-width: 991px) {
+			width: 100%;
+			border-right: none !important;
+			padding: 50px 20px;
+		}
+
+		@media(max-width: 500px) {
+			padding: 50px 15px;
+		}
+
 		&.active{
 			border-right: 1px solid rgba($color: #fff, $alpha: 1);
 		}
@@ -557,6 +600,11 @@ body {
 		border-right: 1px solid rgba($color: #fff, $alpha: 0);
 		transition: 0.4s;
 
+		@media(max-width: 991px) {
+			border-left: none !important;
+			border-right: none !important;
+		}
+
 		&.active{
 			border-left: 1px solid rgba($color: #fff, $alpha: 1);
 			border-right: 1px solid rgba($color: #fff, $alpha: 1);
@@ -566,6 +614,10 @@ body {
 	&--third{
 		border-left: 1px solid rgba($color: #fff, $alpha: 0);
 		transition: 0.4s;
+
+		@media(max-width: 991px) {
+			border-left: none !important;
+		}
 
 		&.active{
 			border-left: 1px solid rgba($color: #fff, $alpha: 1);
@@ -582,6 +634,15 @@ body {
 		z-index: -1;
 		opacity: 0;
 		transition: 0.5s;
+
+		@media(max-width: 991px) {
+			width: auto;
+			height: auto;
+			top: auto;
+			left: auto;
+			inset: 0;
+			opacity: 1;
+		}
 
 		&::before,
 		&::after{
@@ -613,17 +674,161 @@ body {
 		background: var(--biliy);
 		opacity: 0;
 		transition: 0.4s;
+
+		@media(max-width: 991px) {
+			opacity: 1;
+		}
 	}
 
 	&__title{
 		opacity: 0.5;
 		transform: translateY(calc(100% + 12px));
 		transition: 0.4s;
+
+		@media(max-width: 991px) {
+			transform: none;
+			opacity: 1;
+			color: var(--efdeb3-cream-label);
+		}
 	}
 
 	&__text,
 	&__button{
 		transition: 0.4s;
 		opacity: 0;
+
+		@media(max-width: 991px) {
+			opacity: 1;
+		}
+	}
+
+	&__text{
+		@media(max-width: 500px) {
+			font-size: 16px;
+		}
+	}
+}
+
+.advantages{
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 50px 55px;
+}
+
+.advantages-item{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	padding: 30px;
+	position: relative;
+
+	&:hover{
+		.advantages-item{
+			&__dot{
+				opacity: 1;
+			}
+
+			&__title{
+				color: var(--4e7484-blue-groove);
+			}
+		}
+
+		.advantages-item-icon{
+			&__animate{
+				&--rotate{
+					transform: translate(-50%, -50%) rotate(-180deg);
+				}
+
+				&--slide{
+					top: 4px;
+					right: 36px;
+				}
+
+				&--change-start{
+					opacity: 0;
+				}
+
+				&--change-finish{
+					opacity: 1;
+				}
+
+				&--size{
+					width: 30px;
+					height: 38px;
+				}
+			}
+		}
+	}
+
+	&__dot{
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		border-radius: 100%;
+		opacity: 0;
+		transition: 0.5s;
+		background: var(--202020-record-needle);
+	}
+
+	&__title{
+		transition: 0.5s;
+	}
+}
+
+.advantages-item-icon{
+	width: 100px;
+	height: 100px;
+	position: relative;
+	
+	&__main{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		&--bottom{
+			transform: translate(-50%, 0);
+			top: auto;
+			bottom: 0;
+		}
+	}
+
+	&__animate{
+		position: absolute;
+		transition: all 0.5s ease-out;
+
+		&--rotate{
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&--slide{
+			top: 19px;
+			right: 5px;
+		}
+
+		&--change{
+			right: 3px;
+			bottom: 3px;
+		}
+
+		&--change-start{
+			opacity: 1;
+		}
+
+		&--change-finish{
+			opacity: 0;
+		}
+
+		&--size{
+			width: 44px;
+			height: 57px;
+			top: 3px;
+			left: 3px;
+		}
 	}
 }
