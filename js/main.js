@@ -58,4 +58,9 @@ $(document).ready(function () {
 	    	$('.header-wrap').removeClass('fixed');
 	  	}
 	})
+
+	$('.about-us-item').on('mouseenter', function() {
+	  $('.about-us-item').removeClass('active');
+	  $(this).addClass('active');
+	});
 });

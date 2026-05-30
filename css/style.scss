@@ -496,3 +496,134 @@ body {
 		}
 	}
 }
+
+.about-us-content{
+	display: flex;
+}
+
+.about-us-content-section{
+	position: relative;
+	
+	&::after{
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -2;
+		background: var(--202020-record-needle);
+	}
+}
+
+.about-us-item{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 50px;
+	padding: 81px 20px 82px 50px;
+	width: 100%;
+
+	&.active{
+		.about-us-item{
+			&__background{
+				opacity: 1;
+			}
+
+			&__icon,
+			&__text,
+			&__button{
+				opacity: 1;
+			}
+
+			&__title{
+				color: var(--efdeb3-cream-label);
+				opacity: 1;
+				transform: translatey(0);
+			}
+		}
+	}
+	
+	&--first{
+		border-right: 1px solid rgba($color: #fff, $alpha: 0);
+		transition: 0.4s;
+		padding-left: 0;
+		width: calc(100% - 50px);
+
+		&.active{
+			border-right: 1px solid rgba($color: #fff, $alpha: 1);
+		}
+	}
+
+	&--second{
+		border-left: 1px solid rgba($color: #fff, $alpha: 0);
+		border-right: 1px solid rgba($color: #fff, $alpha: 0);
+		transition: 0.4s;
+
+		&.active{
+			border-left: 1px solid rgba($color: #fff, $alpha: 1);
+			border-right: 1px solid rgba($color: #fff, $alpha: 1);
+		}
+	}
+
+	&--third{
+		border-left: 1px solid rgba($color: #fff, $alpha: 0);
+		transition: 0.4s;
+
+		&.active{
+			border-left: 1px solid rgba($color: #fff, $alpha: 1);
+		}
+	}
+
+	&__background{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100dvw;
+		max-width: 1920px;
+		height: 100%;
+		z-index: -1;
+		opacity: 0;
+		transition: 0.5s;
+
+		&::before,
+		&::after{
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: 1;
+		}
+
+		&::before{
+			background: rgba(0, 0, 0, 0.7);
+		}
+
+		&::after{
+			background: rgba(78, 116, 132, 0.2);
+		}
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__icon{
+		width: 10px;
+		height: 10px;
+		border-radius: 100%;
+		background: var(--biliy);
+		opacity: 0;
+		transition: 0.4s;
+	}
+
+	&__title{
+		opacity: 0.5;
+		transform: translateY(calc(100% + 12px));
+		transition: 0.4s;
+	}
+
+	&__text,
+	&__button{
+		transition: 0.4s;
+		opacity: 0;
+	}
+}
