@@ -1,0 +1,350 @@
+//default settings
+
+:root {
+    //section
+    --uikit-default-settings-section-padding: 100px 0;
+
+    //container
+    --uikit-default-settings-container-padding: 20px;
+    --uikit-default-settings-container-width: 1320px;
+
+    //title
+    --uikit-default-settings-title-margin: 0 0 20px 0;
+    --uikit-default-settings-title-font-size: 32px;
+    --uikit-default-settings-title-font-weight: 700;
+    --uikit-default-settings-title-line-height: 120%;
+
+    //title text
+    --uikit-default-settings-title-text-margin: 0 0 40px 0;
+    --uikit-default-settings-title-text-font-size: 18px;
+    --uikit-default-settings-title-text-font-weight: 500;
+    --uikit-default-settings-title-text-line-height: 140%;
+}
+
+// form
+:root {
+    --uikit-form-gap: 30px;
+
+    --uikit-form-link-font-size: 16px;
+    --uikit-form-link-color: blue;
+}
+
+//input
+
+$input-all-list-double-line: 960px;
+$input-all-list-one-line: 720px;
+
+:root {
+    //input title
+    --uikit-input-title-margin: 0 0 10px 0;
+    --uikit-input-title-font-weight: 400;
+    --uikit-input-title-font-size: 16px;
+    --uikit-input-title-line-height: 110%;
+
+    //input
+    --uikit-input-padding: 20px;
+    --uikit-input-height: 56px;
+    --uikit-input-color: black;
+    --uikit-input-font-size: 16px;
+    --uikit-input-placeholder-color: grey;
+    --uikit-input-border-color: grey;
+    --uikit-input-background-color: #fff;
+    --uikit-input-border-radius: 10px;
+
+    //input hover
+    --uikit-input-border-color-hover: black;
+
+    //input notification
+    --uikit-input-notification-margin-top: 8px;
+    --uikit-input-notification-font-size: 14px;
+    --uikit-input-notification-error-color: red;
+    --uikit-input-notification-successfully-color: green;
+
+    //input textarea
+    --uikit-input-textarea-min-height: 150px;
+}
+
+//checkbox
+
+:root {
+    --uikit-checkbox-gap: 10px;
+    --uikit-checkbox-size: 18px;
+    --uikit-checkbox-border-size: 1px;
+    --uikit-checkbox-border-color: grey;
+    --uikit-checkbox-border-radius: 4px;
+    --uikit-checkbox-border-color-checked: blue;
+    --uikit-checkbox-background-checked: blue;
+
+    --uikit-checkbox-title-font-size: 16px;
+    --uikit-checkbox-title-link-color: blue;
+
+    //hover
+    --uikit-checkbox-border-color-hover: blue;
+
+    //radio
+    --uikit-radio-size: 20px;
+    --uikit-radio-border-size: 1px;
+    --uikit-radio-border-color: grey;
+    --uikit-radio-border-radius: 100%;
+    --uikit-radio-border-size-checked: 5px;
+    --uikit-radio-border-color-checked: blue;
+
+    //hover
+    --uikit-radio-border-color-hover: blue;
+}
+
+//switch
+
+:root {
+    --uikit-switch-gap: 10px;
+
+    --uikit-toggler-width: 60px;
+    --uikit-toggler-height: 26px;
+    --uikit-toggler-border-size: 1px;
+    --uikit-toggler-border-color: grey;
+    --uikit-toggler-border-radius: 14px;
+    --uikit-toggler-background: none;
+    --uikit-toggler-border-color-checked: blue;
+    --uikit-toggler-background-checked: blue;
+
+    --uikit-toggler-switcher-left: 5px;
+    --uikit-toggler-switcher-size: 20px;
+    --uikit-toggler-switcher-border-size: 1px;
+    --uikit-toggler-switcher-border-color: grey;
+    --uikit-toggler-switcher-border-radius: 100%;
+    --uikit-toggler-switcher-background: grey;
+    --uikit-toggler-switcher-border-color-checked: white;
+    --uikit-toggler-switcher-background-checked: white;
+
+    --uikit-switch-title-font-size: 18px;
+    --uikit-switch-title-link-color: blue;
+
+    //hover
+
+    --uikit-toggler-border-color-hover: blue;
+}
+
+//button
+
+:root {
+    --uikit-button-padding: 16px 20px;
+    --uikit-button-gap: 6px;
+    --uikit-button-font-weight: 500;
+    --uikit-button-font-size: 18px;
+    --uikit-button-color: white;
+    --uikit-button-border-size: 1px;
+    --uikit-button-border-color: black;
+    --uikit-button-border-radius: 8px;
+    --uikit-button-background: black;
+
+    //hover
+    --uikit-button-color-hover: black;
+    --uikit-button-border-color-hover: black;
+    --uikit-button-background-hover: white;
+}
+
+//pagination
+
+:root {
+    --uikit-pagination-margin: 50px auto;
+    --uikit-pagination-gap: 10px;
+    --uikit-pagination-item-size: 40px;
+    --uikit-pagination-item-font-size: 16px;
+    --uikit-pagination-item-color: black;
+    --uikit-pagination-item-border-size: 1px;
+    --uikit-pagination-item-border-color: black;
+    --uikit-pagination-item-border-radius: 4px;
+    --uikit-pagination-item-background: none;
+
+    //hover
+    --uikit-pagination-item-color-hover: white;
+    --uikit-pagination-item-border-color-hover: black;
+    --uikit-pagination-item-background-hover: black;
+
+    //active
+    --uikit-pagination-item-color-active: white;
+    --uikit-pagination-item-border-color-active: black;
+    --uikit-pagination-item-background-active: black;
+}
+
+//modal
+
+:root {
+    --uikit-modal-padding: 20px;
+    --uikit-modal-width: 620px;
+    --uikit-modal-border-radius: 20px;
+    --uikit-modal-background: white;
+
+    //close
+    --uikit-modal-close-top: 20px;
+    --uikit-modal-close-right: 20px;
+
+    //title
+    --uikit-modal-title-margin: 0 0 20px 0;
+    --uikit-modal-title-font-weight: 700;
+    --uikit-modal-title-font-size: 32px;
+    --uikit-modal-title-line-height: 120%;
+
+    //title text
+    --uikit-modal-title-text-margin: 0 0 20px 0;
+    --uikit-modal-title-text-font-weight: 400;
+    --uikit-modal-title-text-font-size: 18px;
+    --uikit-modal-title-text-line-height: 140%;
+}
+
+//table
+// коли таблицю схлопувати в моб версію
+//ховається шапка і заголовки вже йдуть в самій таблиці
+$table-to-tablet: 980px;
+$table-to-mobile: 560px;
+
+:root {
+    //table
+    --uikit-table-border-size: 1px;
+    --uikit-table-border-color: black;
+    --uikit-table-border-radius: 10px;
+
+    //tr
+    --uikit-table-tr-grid-template-columns: repeat(8, minmax(0, 1fr));
+
+    //td
+    --uikit-table-td-padding: 12px 10px;
+
+    @media (max-width: $table-to-tablet) {
+        --uikit-table-tr-grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    @media (max-width: $table-to-mobile) {
+        --uikit-table-tr-grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+//faq
+
+:root {
+    //faq list
+    --uikit-faq-list-gap: 10px;
+
+    //faq item
+    --uikit-faq-item-padding: 16px 20px;
+    --uikit-faq-item-border-size: 1px;
+    --uikit-faq-item-border-color: black;
+    --uikit-faq-item-border-radius: 10px;
+
+    --uikit-faq-item-title-size: 30px;
+    --uikit-faq-item-title-weight: 700;
+    --uikit-faq-item-title-line-height: 1.2;
+
+    --uikit-faq-item-body-margin: 20px 0 0 0;
+    --uikit-faq-item-text-size: 20px;
+    --uikit-faq-item-text-weight: 400;
+    --uikit-faq-item-text-line-height: 1.4;
+
+    //hover
+    --uikit-faq-item-border-color-hover: grey;
+
+    //active
+
+    --uikit-faq-item-border-color-active: green;
+}
+
+//slider base
+
+:root {
+    --uikit-slider-header-margin: 0 0 40px 0;
+    --uikit-slider-header-gap: 10px;
+
+    --uikit-slider-arrow-wrap-gap: 10px;
+
+    //slider-arrow
+    --uikit-slider-arrow-size: 40px;
+    --uikit-slider-arrow-border-size: 1px;
+    --uikit-slider-arrow-border-color: black;
+    --uikit-slider-arrow-border-radius: 100px;
+    --uikit-slider-arrow-background: black;
+
+    ///slider arrow hover
+    --uikit-slider-arrow-border-color-hover: grey;
+    --uikit-slider-arrow-background-hover: grey;
+
+    //slider arrow position absolute
+    --uikit-slider-arrow-left-right: 20px;
+}
+
+//mobile menu
+
+:root {
+    --uikit-mobile-menu-left: -360px;
+    --uikit-mobile-menu-right: auto;
+    --uikit-mobile-menu-padding: 0;
+    --uikit-mobile-menu-width: 360px;
+    --uikit-mobile-menu-background: black;
+
+    //active
+    --uikit-mobile-menu-left-active: 0;
+    --uikit-mobile-menu-right-active: auto;
+}
+
+// nice-select
+
+:root {
+    //select title
+    --uikit-select-title-margin: 0 0 20px 0;
+    --uikit-select-title-font-weight: 400;
+    --uikit-select-title-font-size: 20px;
+
+    //input notification
+    --uikit-select-notification-margin-top: 8px;
+    --uikit-select-notification-font-size: 14px;
+    --uikit-select-notification-error-color: red;
+    --uikit-select-notification-successfully-color: green;
+
+    //select
+    --uikit-select-padding: 0 15px;
+    --uikit-select-height: 50px;
+    --uikit-select-font-weight: 400;
+    --uikit-select-font-size: 16px;
+    --uikit-select-color: inherit;
+    --uikit-select-border-size: 1px;
+    --uikit-select-border-color: #000;
+    --uikit-select-border-radius: 10px;
+    --uikit-select-background-color: #fff;
+
+    //hover
+    --uikit-select-border-color-hover: green;
+    --uikit-select-background-color-hover: grey;
+
+    //open
+    --uikit-select-border-color-open: green;
+    --uikit-select-background-color-open: grey;
+
+    //arrow
+    --uikit-select-arrow-size: 10px;
+    --uikit-select-arrow-right: 10px;
+    --uikit-select-arrow-background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.117677 0.5292C0.19461 0.455387 0.297887 0.414063 0.40543 0.414063C0.512973 0.414063 0.61625 0.455387 0.693183 0.5292L5 4.65308L9.30596 0.529201C9.38289 0.455387 9.48617 0.414063 9.59371 0.414063C9.70125 0.414063 9.80453 0.455387 9.88146 0.529201C9.91898 0.565079 9.94879 0.607977 9.96915 0.65536C9.98951 0.702744 10 0.753654 10 0.805085C10 0.856516 9.98951 0.907426 9.96915 0.95481C9.94879 1.00219 9.91898 1.04509 9.88146 1.08097L5.30068 5.46635C5.22023 5.54337 5.11234 5.58648 5 5.58648C4.88766 5.58648 4.77977 5.54337 4.69932 5.46635L0.118539 1.08097C0.0810246 1.04509 0.0512078 1.00219 0.0308485 0.95481C0.0104892 0.907426 -1.93402e-08 0.856516 -1.70921e-08 0.805085C-1.4844e-08 0.753653 0.0104892 0.702744 0.0308485 0.65536C0.0512078 0.607976 0.0810246 0.565079 0.118539 0.5292L0.117677 0.5292Z' fill='%23000' /%3E%3C/svg%3E");
+
+    //drop
+    --uikit-select-drop-margin: 4px 0 0 0;
+    --uikit-select-drop-padding: 0;
+    --uikit-select-drop-gap: 0;
+    --uikit-select-drop-border-size: 1px;
+    --uikit-select-drop-border-color: #000;
+    --uikit-select-drop-border-radius: 10px;
+    --uikit-select-drop-background-color: #fff;
+    --uikit-select-drop-box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+
+    //option
+    --uikit-select-option-padding: 15px 20px;
+    --uikit-select-option-font-weight: 400;
+    --uikit-select-option-font-size: 16px;
+    --uikit-select-option-background: #fff;
+
+    //option hover
+    --uikit-select-option-color-hover: grey;
+    --uikit-select-background-hover: rgb(207, 207, 207);
+
+    //option selected
+    --uikit-select-font-weight-selected: 500;
+    --uikit-select-option-color-selected: grey;
+    --uikit-select-background-selected: rgb(207, 207, 207);
+}

@@ -1,0 +1,941 @@
+@import "ui-root.scss";
+
+.demo-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+//default-settings
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.hidden-element {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.section {
+    padding: var(--uikit-default-settings-section-padding);
+}
+
+.container {
+    margin: 0 auto;
+    padding: var(--uikit-default-settings-container-padding);
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: calc(
+        var(--uikit-default-settings-container-width) + var(--uikit-default-settings-container-padding) * 2
+    );
+}
+
+.title {
+    margin: var(--uikit-default-settings-title-margin);
+    font-size: var(--uikit-default-settings-title-font-size);
+    font-weight: var(--uikit-default-settings-title-font-weight);
+    line-height: var(--uikit-default-settings-title-line-height);
+}
+
+.title-text {
+    margin: var(--uikit-default-settings-title-text-margin);
+    font-size: var(--uikit-default-settings-title-text-font-size);
+    font-weight: var(--uikit-default-settings-title-text-font-weight);
+    line-height: var(--uikit-default-settings-title-text-line-height);
+}
+
+// default settings end
+
+//input
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--uikit-form-gap);
+}
+
+.form-link {
+    width: 100%;
+    display: block;
+    font-size: var(--uikit-form-link-font-size);
+    color: var(--uikit-form-link-color);
+    text-align: center;
+}
+
+.form-line {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+
+    .form-link {
+        text-align: right;
+    }
+}
+
+.input-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+
+    &--type2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        @media (max-width: $input-all-list-one-line) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+
+    &--type3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        @media (max-width: $input-all-list-double-line) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @media (max-width: $input-all-list-one-line) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+
+    &--type4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        @media (max-width: $input-all-list-double-line) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @media (max-width: $input-all-list-one-line) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+}
+
+.input-title {
+    margin: var(--uikit-input-title-margin);
+    font-weight: var(--uikit-input-title-font-weight);
+    font-size: var(--uikit-input-title-font-size);
+    line-height: var(--uikit-input-title-line-height);
+    text-align: left;
+}
+
+.input-wrap {
+    display: block;
+
+    span {
+        display: block;
+    }
+
+    &--full-width {
+        grid-column: span 2;
+    }
+
+    &--notification-active {
+        .input-notification {
+            max-height: 100px;
+            opacity: 1;
+            margin-top: var(--uikit-input-notification-margin-top);
+        }
+    }
+
+    &--error {
+        .input {
+            &__item {
+                border-color: var(--uikit-input-notification-error-color);
+            }
+        }
+
+        .input-notification {
+            color: var(--uikit-input-notification-error-color);
+        }
+    }
+
+    &--successfully {
+        .input {
+            &__item {
+                border-color: var(--uikit-input-notification-successfully-color);
+            }
+        }
+
+        .input-notification {
+            color: var(--uikit-input-notification-successfully-color);
+        }
+    }
+}
+
+.input {
+    position: relative;
+    width: 100%;
+
+    &__item {
+        padding: var(--uikit-input-padding);
+        width: 100%;
+        height: var(--uikit-input-height);
+        color: var(--uikit-input-color);
+        font-size: var(--uikit-input-font-size);
+        border: 1px solid var(--uikit-input-border-color);
+        border-radius: var(--uikit-input-border-radius);
+        background: var(--uikit-input-background-color);
+        transition: 0.3s;
+
+        &:hover {
+            border-color: var(--uikit-input-border-color-hover);
+        }
+
+        &::placeholder {
+            color: var(--uikit-input-placeholder-color);
+        }
+
+        &--textarea {
+            resize: vertical;
+            height: auto;
+            min-height: var(--uikit-input-textarea-min-height);
+        }
+
+        &--icon-left {
+            padding-left: 50px;
+        }
+
+        &--icon-right {
+            padding-right: 50px;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        svg,
+        img {
+            display: block;
+        }
+
+        &--left {
+            left: 20px;
+        }
+
+        &--right {
+            right: 20px;
+        }
+    }
+}
+
+.input-notification {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    font-size: var(--uikit-input-notification-size);
+    transition: 0.4s linear;
+}
+
+//input end
+
+//checkbox
+
+.checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--uikit-checkbox-gap);
+    cursor: pointer;
+
+    &:hover {
+        .checkbox {
+            &__box {
+                border-color: var(--uikit-checkbox-border-color-hover);
+            }
+        }
+    }
+
+    &__box {
+        position: relative;
+        min-width: var(--uikit-checkbox-size);
+        width: var(--uikit-checkbox-size);
+        height: var(--uikit-checkbox-size);
+        border: var(--uikit-checkbox-border-size) solid var(--uikit-checkbox-border-color);
+        border-radius: var(--uikit-checkbox-border-radius);
+        transition: 0.3s;
+    }
+
+    &__box-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: 0.3s;
+
+        svg,
+        img {
+            display: block;
+        }
+    }
+
+    input:checked ~ .checkbox__box {
+        border-color: var(--uikit-checkbox-border-color-checked);
+        background: var(--uikit-checkbox-background-checked);
+
+        .checkbox__box-icon {
+            opacity: 1;
+        }
+    }
+
+    &__title {
+        user-select: none;
+        font-size: var(--uikit-checkbox-title-font-size);
+        text-align: left;
+
+        a {
+            color: var(--uikit-checkbox-title-link-color);
+        }
+    }
+
+    &--radio {
+        .checkbox {
+            &__box {
+                position: relative;
+                min-width: var(--uikit-radio-size);
+                width: var(--uikit-radio-size);
+                height: var(--uikit-radio-size);
+                border-color: var(--uikit-radio-border-color);
+                border-radius: var(--uikit-radio-border-radius);
+
+                &:hover {
+                    .checkbox {
+                        &__box {
+                            border-color: var(--uikit-radio-border-color-hover);
+                        }
+                    }
+                }
+            }
+        }
+
+        input:checked ~ .checkbox__box {
+            border-width: var(--uikit-radio-border-size-checked);
+            border-color: var(--uikit-radio-border-color-checked);
+            background: none;
+        }
+    }
+}
+
+//checkbox end
+
+//switch
+
+.switch {
+    display: flex;
+    align-items: center;
+    gap: var(--uikit-switch-gap);
+
+    &:hover {
+        .switch {
+            &__toggler {
+                border-color: var(--uikit-toggler-border-color-hover);
+            }
+        }
+    }
+
+    &__toggler {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        width: var(--uikit-toggler-width);
+        height: var(--uikit-toggler-height);
+        border: var(--uikit-toggler-border-size) solid var(--uikit-toggler-border-color);
+        border-radius: var(--uikit-toggler-border-radius);
+        background: var(--uikit-toggler-background);
+        transition: 0.3s;
+    }
+
+    &__toggler-switcher {
+        position: relative;
+        display: block;
+        left: var(--uikit-toggler-switcher-left);
+        width: var(--uikit-toggler-switcher-size);
+        height: var(--uikit-toggler-switcher-size);
+        border: var(--uikit-toggler-switcher-border-size) solid var(--uikit-toggler-switcher-border-color);
+        border-radius: var(--uikit-toggler-switcher-border-radius);
+        background: var(--uikit-toggler-switcher-background);
+        transition: 0.3s;
+    }
+
+    &__title {
+        font-size: var(--uikit-switch-title-font-size);
+    }
+
+    input:checked ~ .switch {
+        &__toggler {
+            border-color: var(--uikit-toggler-border-color-checked);
+            background: var(--uikit-toggler-background-checked);
+
+            .switch {
+                &__toggler-switcher {
+                    left: calc(
+                        var(--uikit-toggler-width) - var(--uikit-toggler-switcher-size) - var(
+                                --uikit-toggler-switcher-left
+                            ) -
+                            2 * var(--uikit-toggler-border-size)
+                    );
+                    border-color: var(--uikit-toggler-switcher-border-color-checked);
+                    background: var(--uikit-toggler-switcher-background-checked);
+                }
+            }
+        }
+    }
+}
+
+//switch end
+
+//button
+
+.button {
+    padding: var(--uikit-button-padding);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--uikit-button-gap);
+    font-weight: var(--uikit-button-font-weight);
+    font-size: var(--uikit-button-font-size);
+    color: var(--uikit-button-color);
+    text-align: center;
+    text-decoration: none;
+    border: var(--uikit-button-border-size) solid var(--uikit-button-border-color);
+    border-radius: var(--uikit-button-border-radius);
+    background: var(--uikit-button-background);
+    transition: 0.3s;
+
+    &:hover {
+        color: var(--uikit-button-color-hover);
+        border-color: var(--uikit-button-border-color-hover);
+        background: var(--uikit-button-background-hover);
+    }
+
+    &--full-width {
+        width: 100%;
+    }
+}
+
+//pagination
+
+.pagination {
+    margin: var(--uikit-pagination-margin);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--uikit-pagination-gap);
+}
+
+.pagination-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--uikit-pagination-item-size);
+    height: var(--uikit-pagination-item-size);
+    font-size: var(--uikit-pagination-item-font-size);
+    color: var(--uikit-pagination-item-color);
+    border: var(--uikit-pagination-item-border-size) solid var(--uikit-pagination-item-border-color);
+    border-radius: var(--uikit-pagination-item-border-radius);
+    background: var(--uikit-pagination-item-background);
+
+    &:hover {
+        color: var(--uikit-pagination-item-color-hover);
+        border-color: var(--uikit-pagination-item-border-color-hover);
+        background: var(--uikit-pagination-item-background-hover);
+    }
+
+    &.active {
+        color: var(--uikit-pagination-item-color-active);
+        border-color: var(--uikit-pagination-item-border-color-active);
+        background: var(--uikit-pagination-item-background-active);
+    }
+
+    &.active {
+        font-weight: 700;
+    }
+}
+
+//modal
+
+.modal-open {
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -10;
+    background: rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        z-index: 10000;
+    }
+}
+
+.modal-scroll {
+    padding: var(--uikit-default-settings-container-padding);
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    max-height: 100%;
+    position: relative;
+    padding: var(--uikit-modal-padding);
+    width: var(--uikit-modal-width);
+    max-width: 100%;
+    border-radius: var(--uikit-modal-border-radius);
+    background: var(--uikit-modal-background);
+}
+
+.modal-close {
+    position: absolute;
+    top: var(--uikit-modal-close-top);
+    right: var(--uikit-modal-close-right);
+    cursor: pointer;
+}
+
+.modal-title {
+    margin: var(--uikit-modal-title-margin);
+    font-weight: var(--uikit-modal-title-font-weight);
+    font-size: var(--uikit-modal-title-font-size);
+    line-height: var(--uikit-modal-title-line-height);
+    text-align: center;
+}
+
+.modal-title-text {
+    margin: var(--uikit-modal-title-text-margin);
+    font-weight: var(--uikit-modal-title-text-font-weight);
+    font-size: var(--uikit-modal-title-text-font-size);
+    line-height: var(--uikit-modal-title-text-line-height);
+    text-align: center;
+}
+
+.modal-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//modal end
+
+//table
+
+.table {
+    border: var(--uikit-table-border-size) solid var(--uikit-table-border-color);
+    border-radius: var(--uikit-table-border-radius);
+}
+
+.table-head {
+    border-bottom: var(--uikit-table-border-size) solid var(--uikit-table-border-color);
+
+    @media (max-width: $table-to-tablet) {
+        display: none;
+    }
+
+    .td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4px;
+    }
+}
+
+.tr {
+    display: grid;
+    grid-template-columns: var(--uikit-table-tr-grid-template-columns);
+    border-bottom: var(--uikit-table-border-size) solid var(--uikit-table-border-color);
+
+    &:last-child {
+        border: none;
+    }
+}
+
+.td {
+    padding: var(--uikit-table-td-padding);
+    border-right: var(--uikit-table-border-size) solid var(--uikit-table-border-color);
+
+    &:last-child {
+        border: none;
+    }
+
+    @media (max-width: $table-to-tablet) {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        border: none;
+    }
+}
+
+.td-sorting {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    button {
+        font-size: 0;
+    }
+}
+
+.table-mob-header {
+    display: none;
+
+    @media (max-width: $table-to-tablet) {
+        display: block;
+    }
+}
+
+//table end
+
+// faq
+
+.faq {
+    .title {
+        margin-bottom: 10px;
+    }
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    padding: var(--uikit-faq-item-padding);
+    border: var(--uikit-faq-item-border-size) solid var(--uikit-faq-item-border-color);
+    border-radius: var(--uikit-faq-item-border-radius);
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        border-color: var(--uikit-faq-item-border-color-hover);
+    }
+
+    &.active {
+        border-color: var(--uikit-faq-item-border-color-active);
+
+        .faq-item {
+            &__header-icon {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &__body {
+                margin: var(--uikit-faq-item-body-margin);
+
+                height: auto;
+                visibility: visible;
+                opacity: 1;
+                z-index: 10;
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: var(--uikit-faq-item-title-weight);
+        font-size: var(--uikit-faq-item-title-size);
+        line-height: var(--uikit-faq-item-title-line-height);
+        letter-spacing: 0.2px;
+        text-align: left;
+    }
+
+    &__header-text {
+        width: 100%;
+    }
+
+    &__header-icon {
+        min-width: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            min-width: max-content;
+            transition: 0.3s;
+        }
+    }
+
+    &__body {
+        position: relative;
+        margin: 0;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -10;
+        transition: 0.3s;
+
+        font-size: var(--uikit-faq-item-text-size);
+        font-weight: var(--uikit-faq-item-text-weight);
+        line-height: var(--uikit-faq-item-text-line-height);
+    }
+}
+
+//faq end
+
+//slider base
+
+.swiper {
+    position: relative;
+}
+
+.slider-header {
+    margin: var(--uikit-slider-header-margin);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--uikit-slider-header-gap);
+
+    .title {
+        margin: 0;
+    }
+}
+
+.slider-arrow-wrap {
+    display: flex;
+    align-items: center;
+    gap: var(--uikit-slider-arrow-wrap-gap);
+}
+
+.slider-arrow {
+    min-width: var(--uikit-slider-arrow-size);
+    width: var(--uikit-slider-arrow-size);
+    height: var(--uikit-slider-arrow-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--uikit-slider-arrow-border-size) solid var(--uikit-slider-arrow-border-color);
+    border-radius: var(--uikit-slider-arrow-border-radius);
+    background: var(--uikit-slider-arrow-background);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        border-color: var(--uikit-slider-arrow-border-color-hover);
+        background: var(--uikit-slider-arrow-background-hover);
+    }
+
+    &--absolute {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+    }
+
+    &[class*="--prev"] {
+        left: var(--uikit-slider-arrow-left-right);
+    }
+
+    &[class*="--next"] {
+        right: var(--uikit-slider-arrow-left-right);
+    }
+
+    svg,
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+}
+
+//slider base end
+
+//mobile menu base
+
+.mobile-menu-toggler {
+    cursor: pointer;
+}
+
+.mobile-menu {
+    position: fixed;
+    left: var(--uikit-mobile-menu-left);
+    right: var(--uikit-mobile-menu-right);
+    padding: var(--uikit-mobile-menu-padding);
+    width: var(--uikit-mobile-menu-width);
+    height: 100dvh;
+    background: var(--uikit-mobile-menu-background);
+
+    overflow-y: auto;
+    z-index: 10000;
+    transition: 0.3s;
+
+    &.active {
+        left: var(--uikit-mobile-menu-left-active);
+        right: var(--uikit-mobile-menu-right-active);
+    }
+}
+
+//mobile menu base end
+
+// nice-select
+
+.select-wrap {
+    width: 100%;
+
+    &--notification-active {
+        .select-notification {
+            max-height: 100px;
+            opacity: 1;
+            margin-top: var(--uikit-select-notification-margin-top);
+        }
+    }
+
+    &--error {
+        .select {
+            .nice-select {
+                border-color: var(--uikit-select-notification-error-color);
+            }
+        }
+
+        .select-notification {
+            color: var(--uikit-select-notification-error-color);
+        }
+    }
+
+    &--successfully {
+        .select {
+            .nice-select {
+                border-color: var(--uikit-select-notification-successfully-color);
+            }
+        }
+
+        .select-notification {
+            color: var(--uikit-select-notification-successfully-color);
+        }
+    }
+}
+
+.select-title {
+    margin: var(--uikit-select-title-margin);
+    font-weight: var(--uikit-select-title-font-weight);
+    font-size: var(--uikit-select-title-font-size);
+}
+
+.select-notification {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    font-size: var(--uikit-select-notification-size);
+    transition: 0.4s linear;
+}
+
+.select {
+    float: none !important;
+    width: 100%;
+
+    .nice-select {
+        float: none !important;
+        padding: var(--uikit-select-padding);
+        width: 100%;
+        height: var(--uikit-select-height);
+        display: flex;
+        align-items: center;
+        font-weight: var(--uikit-select-font-weight);
+        font-size: var(--uikit-select-font-size);
+        color: var(--uikit-select-color);
+        line-height: 1;
+        border: var(--uikit-select-border-size) solid var(--uikit-select-border-color);
+        border-radius: var(--uikit-select-border-radius);
+        background: var(--uikit-select-background-color);
+
+        &:hover {
+            border-color: var(--uikit-select-border-color-hover);
+            background: var(--uikit-select-background-color-hover);
+        }
+
+        &.open {
+            border-color: var(--uikit-select-border-color-open);
+            background: var(--uikit-select-background-color-open);
+        }
+
+        &:after {
+            display: block;
+            margin: 0;
+            width: var(--uikit-select-arrow-size);
+            height: var(--uikit-select-arrow-size);
+            right: var(--uikit-select-arrow-right);
+            border: none;
+            transform-origin: center;
+            transform: translateY(-50%);
+            background-image: var(--uikit-select-arrow-background-image);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: 0.3s;
+        }
+
+        &.open {
+            &:after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+
+        .list {
+            margin: var(--uikit-select-drop-margin);
+            padding: var(--uikit-select-drop-padding);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: var(--uikit-select-drop-gap);
+            border: var(--uikit-select-drop-border-size) solid var(--uikit-select-drop-border-color);
+            border-radius: var(--uikit-select-border-radius);
+            background: var(--uikit-select-drop-background-color);
+            box-shadow: var(--uikit-select-drop-box-shadow);
+            z-index: 1000;
+        }
+
+        .option {
+            padding: var(--uikit-select-option-padding);
+            min-height: auto;
+            font-weight: var(--uikit-select-option-font-weight);
+            font-size: var(--uikit-select-option-font-size);
+            color: var(--uikit-select-option-color);
+            line-height: 1;
+            background: var(--uikit-select-option-background);
+            transition: 0.3s;
+
+            &:hover {
+                color: var(--uikit-select-option-color-hover);
+                background: var(--uikit-select-background-hover);
+            }
+
+            &.selected {
+                font-weight: var(--uikit-select-font-weight-selected);
+                color: var(--uikit-select-option-color-selected);
+                background: var(--uikit-select-background-selected) !important;
+            }
+        }
+    }
+}
+
+//nice-select end
