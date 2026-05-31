@@ -58,7 +58,7 @@
         }
     }
 
-    &--padding-type2{
+    &--padding-type3{
         --uikit-default-settings-section-padding: 100px 0;
 
         @media(max-width: 991px) {
@@ -75,12 +75,14 @@
     font-family: var(--second-family);
     text-transform: uppercase;
 
-    @media(max-width: 500px) {
-        text-transform: none;
-    }
-
     &--color-type2{
         color: var(--biliy);
+    }
+
+    &--hero-type{
+        @media(max-width: 500px) {
+            text-transform: none;
+        }
     }
 }
 
@@ -452,6 +454,39 @@ $input-all-list-one-line: 500px;
             @media(max-width: 991px) {
                 rotate: -45deg;
                 background: var(--efdeb3-cream-label);
+            }
+        }
+    }
+
+    &--square-download{
+        &:hover{
+            svg{
+                rotate: none;
+                background: none;
+                transform: scale(1);
+
+                path{
+                    fill: var(--4e7484-blue-groove);
+                }
+            }
+        }
+
+        svg{
+            width: 20px;
+            height: 20px;
+            transition: all 0.4s ease;
+            border-radius: 0;
+            transform: scale(0.75);
+
+            path{
+                fill: var(--202020-record-needle);
+                transition: all 0.4s ease;
+            }
+
+            @media(max-width: 991px) {
+                rotate: 0;
+                background: none;
+                transform: scale(1);
             }
         }
     }
