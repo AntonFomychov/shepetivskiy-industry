@@ -99,4 +99,23 @@ $(document).ready(function () {
 	        }
 	    });
 	});
+
+	var swiperConfig = {
+	    slidesPerView: "auto",
+	    loop: true,
+	    freeMode: true,
+	    autoplay: {
+	        delay: 0,
+	        disableOnInteraction: false,
+	    },
+	    speed: 4000,
+		spaceBetween: 5,
+
+		breakpoints: {
+	        501: { spaceBetween: 10 }
+	    },
+	};
+
+	new Swiper(".logo-loop--row1", swiperConfig);
+	new Swiper(".logo-loop--row2", swiperConfig);
 });
