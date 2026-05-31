@@ -69,6 +69,10 @@
             --uikit-default-settings-section-padding: 30px 0;
         }
     }
+
+    &--color-type2{
+        background: var(--202020-record-needle);
+    }
 }
 
 .title{
@@ -484,7 +488,7 @@ $input-all-list-one-line: 500px;
             }
 
             @media(max-width: 991px) {
-                rotate: 0;
+                rotate: none;
                 background: none;
                 transform: scale(1);
             }

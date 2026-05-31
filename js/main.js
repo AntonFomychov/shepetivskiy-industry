@@ -74,7 +74,7 @@ $(document).ready(function () {
 		const $content = $faqItem.find(".faq-item-content");
 
 		$faqItem.toggleClass("active");
-		$content.stop(true, true).slideToggle(300);
+		$content.stop(true, true).slideToggle(500);
 	});
 
 	$('.faq-slider').each(function() {
