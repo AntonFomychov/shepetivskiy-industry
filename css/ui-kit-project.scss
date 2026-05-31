@@ -416,11 +416,15 @@ $input-all-list-one-line: 500px;
 
         @media(max-width: 991px) {
             --uikit-button-color: var(--biliy);
-            --uikit-button-border-color: var(--4e7484-blue-groove);
+            --uikit-button-border-color: var(--202020-record-needle);
         }
 
         &::before{
             background: var(--4e7484-blue-groove);
+
+            @media(max-width: 991px) {
+                display: none;
+            }
         }
 
         &:hover{
