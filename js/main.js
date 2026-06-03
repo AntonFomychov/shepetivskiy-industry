@@ -2,11 +2,13 @@ $(document).ready(function () {
 	function showModal(modalId) {
 		$(".close-bg").addClass("active");
 		$("#" + modalId).addClass("active");
+		$("body").addClass("no-scroll");
 	}
 
 	function closeAllModals() {
 		$(".close-bg").removeClass("active");
 		$(".modal").removeClass("active");
+		$("body").removeClass("no-scroll");
 	}
 
 	$(document).on("click", "[data-modal]", function (e) {
@@ -60,13 +62,13 @@ $(document).ready(function () {
 	})
 
 	$('.about-us-item').on('mouseenter', function() {
-	  $('.about-us-item').removeClass('active');
-	  $(this).addClass('active');
+	  	$('.about-us-item').removeClass('active');
+	  	$(this).addClass('active');
 	});
 
 	$('.delivery-bottom-item-wrap').on('mouseenter', function() {
-	  $('.delivery-bottom-item-wrap').removeClass('active');
-	  $(this).addClass('active');
+	  	$('.delivery-bottom-item-wrap').removeClass('active');
+	  	$(this).addClass('active');
 	});
 
 	$(".faq-item-headline__icon").on("click", function () {
@@ -75,6 +77,30 @@ $(document).ready(function () {
 
 		$faqItem.toggleClass("active");
 		$content.stop(true, true).slideToggle(500);
+	});
+
+	$('.form').on('submit', function(e) {
+	    e.preventDefault();
+
+	    var $form = $(this);
+	    var $container = $form.closest('.form-container');
+	    var isValid = true;
+
+	    $form.find('input[required]').each(function() {
+	        if ($(this).val().trim() === '') isValid = false;
+	    });
+
+	    if (!isValid) return;
+
+	    $form.addClass('hidden');
+	    $container.find('.form-success').addClass('visible');
+	});
+
+	$('.form-success__reset').on('click', function() {
+	    var $container = $(this).closest('.form-container');
+
+	    $container.find('.form').removeClass('hidden').trigger('reset');
+	    $container.find('.form-success').removeClass('visible');
 	});
 
 	$('.faq-slider').each(function() {

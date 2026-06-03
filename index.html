@@ -14,7 +14,94 @@
     
     
    <div class="wrapper">
-      <div class="close-bg"></div>
+      <div class="close-bg">
+         <div class="modal-scroll">
+            <div class="form-modal modal" id="form-modal">
+               <div class="form-container-img">
+                  <img src="./img/form-img.webp" alt="">
+               </div>
+               <div class="section form-container-wrap form-container-wrap--modal">
+                  <button class="form-modal__close modal-close modal-close--relative" data-close="mobile-menu-modal">
+                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25011 21.9823C6.01556 22.2169 5.88379 22.535 5.88379 22.8667C5.88379 23.1984 6.01556 23.5165 6.25011 23.7511C6.48466 23.9856 6.80278 24.1174 7.13448 24.1174C7.46619 24.1174 7.78431 23.9856 8.01886 23.7511L15.0001 16.7673L21.9826 23.7498C22.2184 23.9775 22.5341 24.1035 22.8619 24.1006C23.1896 24.0978 23.5031 23.9663 23.7349 23.7346C23.9666 23.5028 24.0981 23.1893 24.101 22.8616C24.1038 22.5338 23.9778 22.2181 23.7501 21.9823L16.7676 14.9998L23.7501 8.0173C23.9845 7.78275 24.1161 7.4647 24.116 7.13311C24.1159 6.80152 23.984 6.48356 23.7495 6.24918C23.5149 6.01479 23.1969 5.88318 22.8653 5.8833C22.5337 5.88342 22.2157 6.01525 21.9814 6.2498L15.0001 13.2323L8.01761 6.2498C7.78186 6.02211 7.4661 5.89611 7.13836 5.89896C6.81061 5.90181 6.4971 6.03327 6.26534 6.26503C6.03358 6.49679 5.90211 6.81031 5.89927 7.13805C5.89642 7.4658 6.02241 7.78155 6.25011 8.0173L13.2326 14.9998L6.25011 21.9823Z" fill="#202020" />
+                     </svg>
+                  </button>
+                  <h2 class="title title--margin-type2">
+                     Отримати комерційну пропозицію
+                  </h2>
+                  <div class="form-container">
+                     <form class="form" action="">
+                        <div class="small-title small-title--blue">
+                           Заповніть форму і ми звʼяжемось з вами
+                        </div>
+                        <div class="input-list input-list--type2">
+                           <label class="input-wrap">
+                              <span class="input-title">Ваше ім'я</span>
+                              <span class="input">
+                                 <input class="input__item" type="text" placeholder="Ваше імʼя" required>
+                              </span>
+                              <span class="input-notification">
+                                 Поле не повинно бути пустим
+                              </span>
+                           </label>
+                           <label class="input-wrap">
+                              <span class="input-title">Нава компанії</span>
+                              <span class="input">
+                                 <input class="input__item" type="text" placeholder="Компанія" required>
+                              </span>
+                              <span class="input-notification">
+                                 Поле не повинно бути пустим
+                              </span>
+                           </label>
+                        </div>
+                        <div class="input-list input-list--type2">
+                           <label class="input-wrap">
+                              <span class="input-title">Ваш E-mail</span>
+                              <span class="input">
+                                 <input class="input__item" type="email" placeholder="E-mail" required>
+                              </span>
+                              <span class="input-notification">
+                                 Поле не повинно бути пустим
+                              </span>
+                           </label>
+                           <label class="input-wrap">
+                              <span class="input-title">Номер телефону</span>
+                              <span class="input">
+                                 <input class="input__item" type="tel" placeholder="Номер телефону" required>
+                              </span>
+                              <span class="input-notification">
+                                 Поле не повинно бути пустим
+                              </span>
+                           </label>
+                        </div>
+                        <div class="input-list">
+                            <label class="input-wrap">
+                                <span class="input-title">Вкажіть Ваші побажання, зокрема, кількість продукції та місце призначення</span>
+                                <span class="input">
+                                    <textarea class="input__item input__item--textarea" placeholder="Ваше повідомлення"></textarea>
+                                </span>
+                            </label>
+                        </div>
+                        <button type="submit" class="button button--width-type2 button--black-back">Надіслати</button>
+                     </form>
+                     <div class="form-success">
+                        <div class="form-success__title">
+                           <p class="small-title small-title--blue">
+                              Дякуємо за звернення
+                           </p>
+                           <p class="basic-text basic-text--weight-600">
+                              Ваша заявка прийнята. Наш менеджер звʼяжеться з вами якомога швидше.
+                           </p>
+                        </div>
+                        <button class="button button--width-type2 button--black-back form-success__reset">
+                           Повернутись
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
       <div class="modal mobile-menu" id="mobile-menu-modal">
          <div class="mobile-menu-top">
@@ -56,7 +143,7 @@
                   </div>
                </div>
             </div>
-            <button class="mobile-menu__button button button--black-text button--width-type2">
+            <button data-modal="form-modal" class="mobile-menu__button button button--black-text button--width-type2">
                Звʼязатися
             </button>
             <ul class="mobile-menu-nav">
@@ -123,7 +210,7 @@
                         UA
                      </a>
                   </div>
-                  <a href="" class="button">Звʼязатися</a>
+                  <button data-modal="form-modal" class="button">Звʼязатися</button>
                </div>
                <div class="mobile-trigger" data-modal="mobile-menu-modal">
                   <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -182,7 +269,7 @@
                         </span>
                      </div>
                   </div>
-                  <button class="hero-button button">Отримати комерційну пропозицію</button>
+                  <button data-modal="form-modal" class="hero-button button">Отримати комерційну пропозицію</button>
                </div>
             </div>
          </section>
@@ -210,7 +297,7 @@
                      <p class="about-us-item__text basic-text basic-text--white basic-text--weight-600">
                         Наявність якісної сировинної бази дозволяє повністю контролювати якість продукції на всіх етапах виробництва та гарантувати стабільність поставок незалежно від ринкових коливань. 
                      </p>
-                     <button class="about-us-item__button button">Отримати комерційну пропозицію</button>
+                     <button data-modal="form-modal" class="about-us-item__button button">Отримати комерційну пропозицію</button>
                   </div>
                   <div class="about-us-item about-us-item--second">
                      <div class="about-us-item__background">
@@ -223,7 +310,7 @@
                      <p class="about-us-item__text basic-text basic-text--white basic-text--weight-600">
                         Завод забезпечує постачання гранітної продукції для будівельних, дорожніх та інфраструктурних проєктів по всій Україні, а також для партнерів на європейському ринку.
                      </p>
-                     <button class="about-us-item__button button">Отримати комерційну пропозицію</button>
+                     <button data-modal="form-modal" class="about-us-item__button button">Отримати комерційну пропозицію</button>
                   </div>
                   <div class="about-us-item about-us-item--third">
                      <div class="about-us-item__background">
@@ -236,7 +323,7 @@
                      <p class="about-us-item__text basic-text basic-text--white basic-text--weight-600">
                         Продукція Шепетівського щебеневого заводу виготовляється відповідно до чинних державних та європейських стандартів якості й проходить регулярну сертифікацію
                      </p>
-                     <button class="about-us-item__button button">Отримати комерційну пропозицію</button>
+                     <button data-modal="form-modal" class="about-us-item__button button">Отримати комерційну пропозицію</button>
                   </div>
                </div>
             </div>
@@ -1204,64 +1291,79 @@
                <img src="./img/form-img.webp" alt="">
             </div>
             <div class="container">
-               <div class="section section--padding-type3 form-container">
-                  <h2 class="title">
+               <div class="section section--padding-type3 form-container-wrap">
+                  <h2 class="title title--margin-type2">
                      Отримати комерційну пропозицію
                   </h2>
-                  <div class="small-title small-title--blue">
-                     Заповніть форму і ми звʼяжемось з вами
+                  <div class="form-container">
+                     <form class="form" action="">
+                        <div class="small-title small-title--blue">
+                           Заповніть форму і ми звʼяжемось з вами
+                        </div>
+                        <div class="input-list input-list--type2">
+                           <label class="input-wrap">
+                              <span class="input-title">Ваше ім’я</span>
+                              <span class="input">
+                                 <input class="input__item" type="text" placeholder="Ваше імʼя" required>
+                              </span>
+                              <span class="input-notification">
+                                 Поле не повинно бути пустим
+                              </span>
+                           </label>
+                           <label class="input-wrap">
+                              <span class="input-title">Нава компанії</span>
+                              <span class="input">
+                                 <input class="input__item" type="text" placeholder="Компанія" required>
+                              </span>
+                              <span class="input-notification">
+                                 Поле не повинно бути пустим
+                              </span>
+                           </label>
+                        </div>
+                        <div class="input-list input-list--type2">
+                           <label class="input-wrap">
+                              <span class="input-title">Ваш E-mail</span>
+                              <span class="input">
+                                 <input class="input__item" type="email" placeholder="E-mail" required>
+                              </span>
+                              <span class="input-notification">
+                                 Поле не повинно бути пустим
+                              </span>
+                           </label>
+                           <label class="input-wrap">
+                              <span class="input-title">Номер телефону</span>
+                              <span class="input">
+                                 <input class="input__item" type="tel" placeholder="Номер телефону" required>
+                              </span>
+                              <span class="input-notification">
+                                 Поле не повинно бути пустим
+                              </span>
+                           </label>
+                        </div>
+                        <div class="input-list">
+                            <label class="input-wrap">
+                                <span class="input-title">Вкажіть Ваші побажання, зокрема, кількість продукції та місце призначення</span>
+                                <span class="input">
+                                    <textarea class="input__item input__item--textarea" placeholder="Ваше повідомлення"></textarea>
+                                </span>
+                            </label>
+                        </div>
+                        <button type="submit" class="button button--width-type2 button--black-back">Надіслати</button>
+                     </form>
+                     <div class="form-success">
+                        <div class="form-success__title">
+                           <p class="small-title small-title--blue">
+                              Дякуємо за звернення
+                           </p>
+                           <p class="basic-text basic-text--weight-600">
+                              Ваша заявка прийнята. Наш менеджер звʼяжеться з вами якомога швидше.
+                           </p>
+                        </div>
+                        <button class="button button--width-type2 button--black-back form-success__reset">
+                           Повернутись
+                        </button>
+                     </div>
                   </div>
-                  <form class="form" action="">
-                     <div class="input-list input-list--type2">
-                        <label class="input-wrap">
-                           <span class="input-title">Ваше ім’я</span>
-                           <span class="input">
-                              <input class="input__item" type="text" placeholder="Ваше імʼя" required>
-                           </span>
-                           <span class="input-notification">
-                              Поле не повинно бути пустим
-                           </span>
-                        </label>
-                        <label class="input-wrap">
-                           <span class="input-title">Нава компанії</span>
-                           <span class="input">
-                              <input class="input__item" type="text" placeholder="Компанія" required>
-                           </span>
-                           <span class="input-notification">
-                              Поле не повинно бути пустим
-                           </span>
-                        </label>
-                     </div>
-                     <div class="input-list input-list--type2">
-                        <label class="input-wrap">
-                           <span class="input-title">Ваш E-mail</span>
-                           <span class="input">
-                              <input class="input__item" type="email" placeholder="E-mail" required>
-                           </span>
-                           <span class="input-notification">
-                              Поле не повинно бути пустим
-                           </span>
-                        </label>
-                        <label class="input-wrap">
-                           <span class="input-title">Номер телефону</span>
-                           <span class="input">
-                              <input class="input__item" type="tel" placeholder="Номер телефону" required>
-                           </span>
-                           <span class="input-notification">
-                              Поле не повинно бути пустим
-                           </span>
-                        </label>
-                     </div>
-                     <div class="input-list">
-                         <label class="input-wrap">
-                             <span class="input-title">Вкажіть Ваші побажання, зокрема, кількість продукції та місце призначення</span>
-                             <span class="input">
-                                 <textarea class="input__item input__item--textarea" placeholder="Ваше повідомлення"></textarea>
-                             </span>
-                         </label>
-                     </div>
-                     <button type="submit" class="button button--width-type2 button--black-back">Надіслати</button>
-                  </form>
                </div>
             </div>
          </section>
@@ -1310,10 +1412,11 @@
                   <li class="nav__item"><a href="#document">ДОКУМЕНТАЦІЯ</a></li>
                   <li class="nav__item"><a href="#contact">КОНТАКТИ</a></li>
                </ul>
-               <button class="footer__button button">Звʼязатися</button>
+               <button data-modal="form-modal" class="footer__button button">Звʼязатися</button>
             </div>
          </div>
       </footer>
+
     
    </div>
 
