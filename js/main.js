@@ -112,8 +112,7 @@ $(document).ready(function () {
 	            prevEl: $(this).closest('.faq-item-content').find('.slider-arrow--prev')[0],
 	        },
 	        breakpoints: {
-	            501: { slidesPerView: 2 },
-	            801: { slidesPerView: 4 },
+	            501: { slidesPerView: "auto", }
 	        },
 	        on: {
 	            sliderFirstMove() {

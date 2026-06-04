@@ -17,21 +17,26 @@
       <div class="close-bg">
          <div class="modal-scroll">
             <div class="form-modal modal" id="form-modal">
+               <button class="form-modal__close-mobile modal-close modal-close--relative" data-close="mobile-menu-modal">
+                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25011 21.9823C6.01556 22.2169 5.88379 22.535 5.88379 22.8667C5.88379 23.1984 6.01556 23.5165 6.25011 23.7511C6.48466 23.9856 6.80278 24.1174 7.13448 24.1174C7.46619 24.1174 7.78431 23.9856 8.01886 23.7511L15.0001 16.7673L21.9826 23.7498C22.2184 23.9775 22.5341 24.1035 22.8619 24.1006C23.1896 24.0978 23.5031 23.9663 23.7349 23.7346C23.9666 23.5028 24.0981 23.1893 24.101 22.8616C24.1038 22.5338 23.9778 22.2181 23.7501 21.9823L16.7676 14.9998L23.7501 8.0173C23.9845 7.78275 24.1161 7.4647 24.116 7.13311C24.1159 6.80152 23.984 6.48356 23.7495 6.24918C23.5149 6.01479 23.1969 5.88318 22.8653 5.8833C22.5337 5.88342 22.2157 6.01525 21.9814 6.2498L15.0001 13.2323L8.01761 6.2498C7.78186 6.02211 7.4661 5.89611 7.13836 5.89896C6.81061 5.90181 6.4971 6.03327 6.26534 6.26503C6.03358 6.49679 5.90211 6.81031 5.89927 7.13805C5.89642 7.4658 6.02241 7.78155 6.25011 8.0173L13.2326 14.9998L6.25011 21.9823Z" fill="#202020" />
+                  </svg>
+               </button>
                <div class="form-container-img">
                   <img src="./img/form-img.webp" alt="">
                </div>
-               <div class="section form-container-wrap form-container-wrap--modal">
+               <div class="section section--padding-type4 form-container-wrap form-container-wrap--modal">
                   <button class="form-modal__close modal-close modal-close--relative" data-close="mobile-menu-modal">
                      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25011 21.9823C6.01556 22.2169 5.88379 22.535 5.88379 22.8667C5.88379 23.1984 6.01556 23.5165 6.25011 23.7511C6.48466 23.9856 6.80278 24.1174 7.13448 24.1174C7.46619 24.1174 7.78431 23.9856 8.01886 23.7511L15.0001 16.7673L21.9826 23.7498C22.2184 23.9775 22.5341 24.1035 22.8619 24.1006C23.1896 24.0978 23.5031 23.9663 23.7349 23.7346C23.9666 23.5028 24.0981 23.1893 24.101 22.8616C24.1038 22.5338 23.9778 22.2181 23.7501 21.9823L16.7676 14.9998L23.7501 8.0173C23.9845 7.78275 24.1161 7.4647 24.116 7.13311C24.1159 6.80152 23.984 6.48356 23.7495 6.24918C23.5149 6.01479 23.1969 5.88318 22.8653 5.8833C22.5337 5.88342 22.2157 6.01525 21.9814 6.2498L15.0001 13.2323L8.01761 6.2498C7.78186 6.02211 7.4661 5.89611 7.13836 5.89896C6.81061 5.90181 6.4971 6.03327 6.26534 6.26503C6.03358 6.49679 5.90211 6.81031 5.89927 7.13805C5.89642 7.4658 6.02241 7.78155 6.25011 8.0173L13.2326 14.9998L6.25011 21.9823Z" fill="#202020" />
                      </svg>
                   </button>
-                  <h2 class="title title--margin-type2">
+                  <h2 class="form-modal__title title title--margin-type2">
                      Отримати комерційну пропозицію
                   </h2>
-                  <div class="form-container">
+                  <div class="form-container form-container--modal">
                      <form class="form" action="">
-                        <div class="small-title small-title--blue">
+                        <div class="form-modal__small-title small-title small-title--blue">
                            Заповніть форму і ми звʼяжемось з вами
                         </div>
                         <div class="input-list input-list--type2">
@@ -82,7 +87,7 @@
                                 </span>
                             </label>
                         </div>
-                        <button type="submit" class="button button--width-type2 button--black-back">Надіслати</button>
+                        <button type="submit" class="form__button button button--width-type2 button--black-back">Надіслати</button>
                      </form>
                      <div class="form-success">
                         <div class="form-success__title">
@@ -459,7 +464,7 @@
                <h2 class="title">
                   Каталог продукції
                </h2>
-               <p class="title-text">
+               <p class="title-text title-text--size-type2">
                   Гранітні матеріали від виробника. Виберіть необхідну фракцію для вашого проєкту.
                </p>
                <div class="catalog">
@@ -670,7 +675,7 @@
                         <h2 class="title title--color-type2">
                            Доставка
                         </h2>
-                        <p class="title-text title-text--color-type2 title-text--margin-type3">
+                        <p class="title-text title-text--size-type2 title-text--color-type2 title-text--margin-type5">
                            Організовуємо поставки гранітної продукції автомобільним та залізничним транспортом
                         </p>
                      </div>
@@ -1348,7 +1353,7 @@
                                 </span>
                             </label>
                         </div>
-                        <button type="submit" class="button button--width-type2 button--black-back">Надіслати</button>
+                        <button type="submit" class="form__button button button--width-type2 button--black-back">Надіслати</button>
                      </form>
                      <div class="form-success">
                         <div class="form-success__title">
