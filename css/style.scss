@@ -137,11 +137,11 @@ body {
   	  clip-path: inset(0 0 100% 0);
   	}
 
-	5% {
+	8% {
   	  clip-path: inset(0 0 97% 0);
   	}
 
-	80% {
+	90% {
   	  clip-path: inset(0 0 0 0);
   	}
 
@@ -2269,6 +2269,12 @@ body {
 		display: flex;
 		flex-direction: column;
 		gap: 30px;
+	}
+
+	&__list-title{
+		@media(max-width: 500px) {
+			font-size: 16px;
+		}
 	}
 }
 
