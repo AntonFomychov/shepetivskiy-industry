@@ -105,6 +105,245 @@
                   </div>
                </div>
             </div>
+            <div class="product-modal modal" id="product-modal">
+               <button class="modal-close" data-close="product-modal">
+                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25011 21.9823C6.01556 22.2169 5.88379 22.535 5.88379 22.8667C5.88379 23.1984 6.01556 23.5165 6.25011 23.7511C6.48466 23.9856 6.80278 24.1174 7.13448 24.1174C7.46619 24.1174 7.78431 23.9856 8.01886 23.7511L15.0001 16.7673L21.9826 23.7498C22.2184 23.9775 22.5341 24.1035 22.8619 24.1006C23.1896 24.0978 23.5031 23.9663 23.7349 23.7346C23.9666 23.5028 24.0981 23.1893 24.101 22.8616C24.1038 22.5338 23.9778 22.2181 23.7501 21.9823L16.7676 14.9998L23.7501 8.0173C23.9845 7.78275 24.1161 7.4647 24.116 7.13311C24.1159 6.80152 23.984 6.48356 23.7495 6.24918C23.5149 6.01479 23.1969 5.88318 22.8653 5.8833C22.5337 5.88342 22.2157 6.01525 21.9814 6.2498L15.0001 13.2323L8.01761 6.2498C7.78186 6.02211 7.4661 5.89611 7.13836 5.89896C6.81061 5.90181 6.4971 6.03327 6.26534 6.26503C6.03358 6.49679 5.90211 6.81031 5.89927 7.13805C5.89642 7.4658 6.02241 7.78155 6.25011 8.0173L13.2326 14.9998L6.25011 21.9823Z" fill="#202020" />
+                  </svg>
+               </button>
+               <div class="product-modal-img">
+                  <img src="./img/product1.webp" alt="" class="product-modal-img__photo">
+                  <div class="product-modal-img__title basic-text basic-text--weight-600">
+                     <img src="./img/logo-dark.webp" alt="">
+                     НАЗВА ЗАВОДУ
+                  </div>
+               </div>
+               <div class="product-modal-container section section--padding-type3">
+                  <h2 class="title title--hero-type title--margin-type2">Щебінь гранітний</h2>
+                  <div class="product-modal-characteristics">
+                     <p class="product-modal__small-title basic-text basic-text--blue basic-text--size-16">
+                        Оберіть фракцію
+                     </p>
+                     <div class="product-modal-characteristics__container">
+                        <button class="product-modal-characteristics__item active">5-20 мм</button>
+                        <button class="product-modal-characteristics__item">20-40 мм</button>
+                        <button class="product-modal-characteristics__item">40-70 мм</button>
+                     </div>
+                  </div>
+                  <div class="product-modal-specifications">
+                     <div class="product-modal-specifications__container">
+                        <p class="product-modal__small-title basic-text basic-text--blue basic-text--size-16">
+                           Стандарт якості (ДСТУ)
+                        </p>
+                        <div class="product-modal-specifications__quality">
+                           ДСТУ Б.В.2.7-75-98
+                        </div>
+                     </div>
+                     <div class="product-modal-specifications__container">
+                        <p class="product-modal__small-title basic-text basic-text--blue basic-text--size-16">
+                           Основне призначення
+                        </p>
+                        <ul class="catalog-item__list catalog-item__list--modal basic-text basic-text--size-16">
+                           <li class="catalog-item__list-item catalog-item__list-item--modal">Виробництво високоміцного бетону та залізобетонних конструкцій</li>
+                           <li class="catalog-item__list-item catalog-item__list-item--modal">Виготовлення асфальтобетонних сумішей для верхніх шарів доріг</li>
+                           <li class="catalog-item__list-item catalog-item__list-item--modal">Заливка фундаментів для приватного та комерційного будівництва</li>
+                        </ul>
+                     </div>
+                     <p class="catalog-item__price">
+                        Від 350 <span class="catalog-item__price--small">грн/т</span>
+                     </p>
+                     <div class="product-modal-specifications__button-container">
+                        <button data-modal="product-checkout-modal" class="button button--black-back">Замовити</button>
+                        <button class="button button--black-text">Паспорт товару</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="product-checkout-modal modal" id="product-checkout-modal">
+               <button class="modal-close" data-close="product-checkout-modal">
+                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25011 21.9823C6.01556 22.2169 5.88379 22.535 5.88379 22.8667C5.88379 23.1984 6.01556 23.5165 6.25011 23.7511C6.48466 23.9856 6.80278 24.1174 7.13448 24.1174C7.46619 24.1174 7.78431 23.9856 8.01886 23.7511L15.0001 16.7673L21.9826 23.7498C22.2184 23.9775 22.5341 24.1035 22.8619 24.1006C23.1896 24.0978 23.5031 23.9663 23.7349 23.7346C23.9666 23.5028 24.0981 23.1893 24.101 22.8616C24.1038 22.5338 23.9778 22.2181 23.7501 21.9823L16.7676 14.9998L23.7501 8.0173C23.9845 7.78275 24.1161 7.4647 24.116 7.13311C24.1159 6.80152 23.984 6.48356 23.7495 6.24918C23.5149 6.01479 23.1969 5.88318 22.8653 5.8833C22.5337 5.88342 22.2157 6.01525 21.9814 6.2498L15.0001 13.2323L8.01761 6.2498C7.78186 6.02211 7.4661 5.89611 7.13836 5.89896C6.81061 5.90181 6.4971 6.03327 6.26534 6.26503C6.03358 6.49679 5.90211 6.81031 5.89927 7.13805C5.89642 7.4658 6.02241 7.78155 6.25011 8.0173L13.2326 14.9998L6.25011 21.9823Z" fill="#202020" />
+                  </svg>
+               </button>
+               <div class="product-modal-img product-modal-img--checkout">
+                  <img src="./img/product1.webp" alt="" class="product-modal-img__photo">
+                  <div class="product-modal-img__title basic-text basic-text--weight-600">
+                     <img src="./img/logo-dark.webp" alt="">
+                     НАЗВА ЗАВОДУ
+                  </div>
+               </div>
+               <div class="product-modal-container product-modal-container--checkout section section--padding-type3">
+                  <h2 class="title title--hero-type title--margin-type2">Щебінь гранітний</h2>
+                  <div class="product-checkout-specifications">
+                     <div class="product-checkout-specifications__title-container">
+                        <p class="product-modal__small-title basic-text basic-text--blue basic-text--size-16">
+                           Стандарт якості (ДСТУ)
+                        </p>
+                        <div class="product-modal-specifications__quality">
+                           ДСТУ Б.В.2.7-75-98
+                        </div>
+                     </div>
+                     <div class="product-checkout-specifications__price-container">
+                        <div class="product-checkout-specifications__characteristics-container">
+                           <p class="product-modal__small-title basic-text basic-text--blue basic-text--size-16">
+                              Фракція:
+                           </p>
+                           <div class="product-modal-characteristics__item active">5-20 мм</div>
+                        </div>
+                        <p class="catalog-item__price">
+                           Від 350 <span class="catalog-item__price--small">грн/т</span>
+                        </p>
+                     </div>
+                  </div>
+                  <div class="form-container form-container--modal">
+                     <form class="form" action="">
+                        <div class="form-modal__small-title small-title small-title--blue">
+                           Заповніть форму і ми звʼяжемось з вами
+                        </div>
+                        <div class="input-list input-list--type2">
+                           <label class="input-wrap">
+                              <span class="input-title">Ваше ім'я</span>
+                              <span class="input">
+                                 <input class="input__item" type="text" placeholder="Ваше імʼя" required>
+                              </span>
+                              <span class="input-notification">
+                                 Поле не повинно бути пустим
+                              </span>
+                           </label>
+                           <label class="input-wrap">
+                              <span class="input-title">Нава компанії</span>
+                              <span class="input">
+                                 <input class="input__item" type="text" placeholder="Компанія" required>
+                              </span>
+                              <span class="input-notification">
+                                 Поле не повинно бути пустим
+                              </span>
+                           </label>
+                        </div>
+                        <div class="input-list input-list--type2">
+                           <label class="input-wrap">
+                              <span class="input-title">Ваш E-mail</span>
+                              <span class="input">
+                                 <input class="input__item" type="email" placeholder="E-mail" required>
+                              </span>
+                              <span class="input-notification">
+                                 Поле не повинно бути пустим
+                              </span>
+                           </label>
+                           <label class="input-wrap">
+                              <span class="input-title">Номер телефону</span>
+                              <span class="input">
+                                 <input class="input__item" type="tel" placeholder="Номер телефону" required>
+                              </span>
+                              <span class="input-notification">
+                                 Поле не повинно бути пустим
+                              </span>
+                           </label>
+                        </div>
+                        <div class="select-wrap">
+                           <div class="select-title">
+                               Оберіть тип доставки
+                           </div>
+                           <div class="select">
+                               <select required name="select" class="nice-select">
+                                   <option value="" disabled selected>Тип доставки</option>
+                                   <option value="2">Залізницею</option>
+                                   <option value="3">Автотранспортом</option>
+                               </select>
+                           </div>
+                           <div class="select-notification">
+                               Незаповнене поле
+                           </div>
+                        </div>
+                        <div class="input-list">
+                            <label class="input-wrap">
+                                <span class="input-title">Вкажіть Ваші побажання, зокрема, кількість продукції та місце призначення</span>
+                                <span class="input">
+                                    <textarea class="input__item input__item--textarea" placeholder="Ваше повідомлення"></textarea>
+                                </span>
+                            </label>
+                        </div>
+                        <button type="submit" class="form__button button button--width-type2 button--black-back">Надіслати</button>
+                     </form>
+                     <div class="form-success">
+                        <div class="form-success__title">
+                           <p class="small-title small-title--blue">
+                              Дякуємо за звернення
+                           </p>
+                           <p class="basic-text basic-text--weight-600">
+                              Ваша заявка прийнята. Наш менеджер звʼяжеться з вами якомога швидше.
+                           </p>
+                        </div>
+                        <button class="button button--width-type2 button--black-back form-success__reset">
+                           Повернутись
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal" id="delivery-car-modal">
+               <button class="delivery-modal__close modal-close" data-close="delivery-car-modal">
+                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25011 21.9823C6.01556 22.2169 5.88379 22.535 5.88379 22.8667C5.88379 23.1984 6.01556 23.5165 6.25011 23.7511C6.48466 23.9856 6.80278 24.1174 7.13448 24.1174C7.46619 24.1174 7.78431 23.9856 8.01886 23.7511L15.0001 16.7673L21.9826 23.7498C22.2184 23.9775 22.5341 24.1035 22.8619 24.1006C23.1896 24.0978 23.5031 23.9663 23.7349 23.7346C23.9666 23.5028 24.0981 23.1893 24.101 22.8616C24.1038 22.5338 23.9778 22.2181 23.7501 21.9823L16.7676 14.9998L23.7501 8.0173C23.9845 7.78275 24.1161 7.4647 24.116 7.13311C24.1159 6.80152 23.984 6.48356 23.7495 6.24918C23.5149 6.01479 23.1969 5.88318 22.8653 5.8833C22.5337 5.88342 22.2157 6.01525 21.9814 6.2498L15.0001 13.2323L8.01761 6.2498C7.78186 6.02211 7.4661 5.89611 7.13836 5.89896C6.81061 5.90181 6.4971 6.03327 6.26534 6.26503C6.03358 6.49679 5.90211 6.81031 5.89927 7.13805C5.89642 7.4658 6.02241 7.78155 6.25011 8.0173L13.2326 14.9998L6.25011 21.9823Z" fill="#202020" />
+                  </svg>
+               </button>
+               <div class="delivery-modal">
+                  <div class="delivery-modal__img product-modal-img">
+                     <img src="./img/delivery1.webp" alt="" class="product-modal-img__photo">
+                  </div>
+                  <div class="delivery-modal-content section section--padding-type3">
+                     <div class="delivery-modal-content-top">
+                        <div class="delivery-modal-content-top__small-title product-modal-characteristics__item active">Доставка</div>
+                        <h2 class="delivery-modal-content-top__title title title--transform-type2 title--margin-type2">Автомобільним транспортом</h2>
+                     </div>
+                     <div class="delivery-modal-content__container">
+                        <p class="basic-text basic-text--weight-600">Поставка автомобільним транспортом здійснюється на умовах:</p>
+                        <div class="delivery-modal-content-list">
+                           <ul class="catalog-item__list catalog-item__list--modal basic-text basic-text--size-16">
+                              <li class="catalog-item__list-item catalog-item__list-item--modal">EXW — самовивіз з заводу</li>
+                              <li class="catalog-item__list-item catalog-item__list-item--modal">DDP — доставка до об’єкта замовника</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <p class="basic-text basic-text--size-16">Фінальні умови поставки, включаючи вартість, терміни, обсяги та порядок оплати, узгоджуються індивідуально залежно від параметрів замовлення та фіксуються у договорі постачання.</p>
+                     <button data-modal="form-modal" class="delivery-modal-content__button button button--black-text">Отримати комерційну пропозицію</button>
+                  </div>
+               </div>
+            </div>
+            <div class="modal" id="delivery-rail-modal">
+               <button class="delivery-modal__close modal-close" data-close="delivery-rail-modal">
+                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25011 21.9823C6.01556 22.2169 5.88379 22.535 5.88379 22.8667C5.88379 23.1984 6.01556 23.5165 6.25011 23.7511C6.48466 23.9856 6.80278 24.1174 7.13448 24.1174C7.46619 24.1174 7.78431 23.9856 8.01886 23.7511L15.0001 16.7673L21.9826 23.7498C22.2184 23.9775 22.5341 24.1035 22.8619 24.1006C23.1896 24.0978 23.5031 23.9663 23.7349 23.7346C23.9666 23.5028 24.0981 23.1893 24.101 22.8616C24.1038 22.5338 23.9778 22.2181 23.7501 21.9823L16.7676 14.9998L23.7501 8.0173C23.9845 7.78275 24.1161 7.4647 24.116 7.13311C24.1159 6.80152 23.984 6.48356 23.7495 6.24918C23.5149 6.01479 23.1969 5.88318 22.8653 5.8833C22.5337 5.88342 22.2157 6.01525 21.9814 6.2498L15.0001 13.2323L8.01761 6.2498C7.78186 6.02211 7.4661 5.89611 7.13836 5.89896C6.81061 5.90181 6.4971 6.03327 6.26534 6.26503C6.03358 6.49679 5.90211 6.81031 5.89927 7.13805C5.89642 7.4658 6.02241 7.78155 6.25011 8.0173L13.2326 14.9998L6.25011 21.9823Z" fill="#202020" />
+                  </svg>
+               </button>
+               <div class="delivery-modal">
+                  <div class="delivery-modal__img product-modal-img">
+                     <img src="./img/delivery2.webp" alt="" class="product-modal-img__photo">
+                  </div>
+                  <div class="delivery-modal-content delivery-modal-content--rail section section--padding-type3">
+                     <div class="delivery-modal-content-top">
+                        <div class="delivery-modal-content-top__small-title product-modal-characteristics__item active">Доставка</div>
+                        <h2 class="delivery-modal-content-top__title title title--transform-type2 title--margin-type2">Залізничним транспортом</h2>
+                     </div>
+                     <p class="basic-text basic-text--size-16">Поставка залізничним транспортом здійснюється до станції призначення вантажоодержувача власним або погодженим рухомим складом.<br>
+                     За попереднім погодженням можливе завантаження рухомого складу замовника.</p>
+                     <div class="delivery-modal-content__container">
+                        <p class="basic-text basic-text--weight-600">Логістична інфраструктура заводу дозволяє забезпечувати:</p>
+                        <div class="delivery-modal-content-list">
+                           <ul class="catalog-item__list catalog-item__list--modal basic-text basic-text--size-16">
+                              <li class="catalog-item__list-item catalog-item__list-item--modal">завантаження вагонів насипом;</li>
+                              <li class="catalog-item__list-item catalog-item__list-item--modal">оперативне формування великих партій продукції;</li>
+                              <li class="catalog-item__list-item catalog-item__list-item--modal">маршрутизацію перевезень;</li>
+                              <li class="catalog-item__list-item catalog-item__list-item--modal">дотримання вимог до збереження вантажу під час транспортування;</li>
+                              <li class="catalog-item__list-item catalog-item__list-item--modal">сезонні заходи захисту продукції в зимовий період.</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <p class="basic-text basic-text--size-16">Наші логісти супроводжують поставку на всіх етапах та контролюють дотримання погоджених термінів відвантаження.</p>
+                     <button data-modal="form-modal" class="delivery-modal-content__button button button--black-text">Отримати комерційну пропозицію</button>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
 
@@ -488,7 +727,7 @@
                            Від 350 <span class="catalog-item__price--small">грн/т</span>
                         </p>
                      </div>
-                     <button class="catalog-item__button button button--square button--square-black">
+                     <button data-modal="product-modal" class="catalog-item__button button button--square button--square-black">
                         Детальніше
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.95514 5.95517C6.01319 5.89709 6.0821 5.85102 6.15796 5.81959C6.23381 5.78815 6.31512 5.77197 6.39723 5.77197C6.47934 5.77197 6.56064 5.78815 6.6365 5.81959C6.71235 5.85102 6.78127 5.89709 6.83931 5.95517L13.9226 13.0385C13.9824 13.0961 14.03 13.1651 14.0628 13.2413C14.0956 13.3175 14.1129 13.3996 14.1136 13.4825C14.1144 13.5655 14.0986 13.6478 14.0672 13.7247C14.0358 13.8015 13.9895 13.8713 13.9308 13.93C13.8722 13.9887 13.8024 14.0351 13.7256 14.0666C13.6488 14.0981 13.5665 14.1139 13.4835 14.1132C13.4005 14.1126 13.3185 14.0954 13.2422 14.0626C13.166 14.0299 13.097 13.9823 13.0393 13.9227L5.95598 6.83934C5.83893 6.72215 5.77319 6.5633 5.77319 6.39767C5.77319 6.23205 5.83893 6.07319 5.95598 5.95601L5.95514 5.95517Z" fill="black" />
@@ -516,7 +755,7 @@
                            Від 350 <span class="catalog-item__price--small">грн/т</span>
                         </p>
                      </div>
-                     <button class="catalog-item__button button button--square button--square-black">
+                     <button data-modal="product-modal" class="catalog-item__button button button--square button--square-black">
                         Детальніше
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.95514 5.95517C6.01319 5.89709 6.0821 5.85102 6.15796 5.81959C6.23381 5.78815 6.31512 5.77197 6.39723 5.77197C6.47934 5.77197 6.56064 5.78815 6.6365 5.81959C6.71235 5.85102 6.78127 5.89709 6.83931 5.95517L13.9226 13.0385C13.9824 13.0961 14.03 13.1651 14.0628 13.2413C14.0956 13.3175 14.1129 13.3996 14.1136 13.4825C14.1144 13.5655 14.0986 13.6478 14.0672 13.7247C14.0358 13.8015 13.9895 13.8713 13.9308 13.93C13.8722 13.9887 13.8024 14.0351 13.7256 14.0666C13.6488 14.0981 13.5665 14.1139 13.4835 14.1132C13.4005 14.1126 13.3185 14.0954 13.2422 14.0626C13.166 14.0299 13.097 13.9823 13.0393 13.9227L5.95598 6.83934C5.83893 6.72215 5.77319 6.5633 5.77319 6.39767C5.77319 6.23205 5.83893 6.07319 5.95598 5.95601L5.95514 5.95517Z" fill="black" />
@@ -544,7 +783,7 @@
                            Від 350 <span class="catalog-item__price--small">грн/т</span>
                         </p>
                      </div>
-                     <button class="catalog-item__button button button--square button--square-black">
+                     <button data-modal="product-modal" class="catalog-item__button button button--square button--square-black">
                         Детальніше
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.95514 5.95517C6.01319 5.89709 6.0821 5.85102 6.15796 5.81959C6.23381 5.78815 6.31512 5.77197 6.39723 5.77197C6.47934 5.77197 6.56064 5.78815 6.6365 5.81959C6.71235 5.85102 6.78127 5.89709 6.83931 5.95517L13.9226 13.0385C13.9824 13.0961 14.03 13.1651 14.0628 13.2413C14.0956 13.3175 14.1129 13.3996 14.1136 13.4825C14.1144 13.5655 14.0986 13.6478 14.0672 13.7247C14.0358 13.8015 13.9895 13.8713 13.9308 13.93C13.8722 13.9887 13.8024 14.0351 13.7256 14.0666C13.6488 14.0981 13.5665 14.1139 13.4835 14.1132C13.4005 14.1126 13.3185 14.0954 13.2422 14.0626C13.166 14.0299 13.097 13.9823 13.0393 13.9227L5.95598 6.83934C5.83893 6.72215 5.77319 6.5633 5.77319 6.39767C5.77319 6.23205 5.83893 6.07319 5.95598 5.95601L5.95514 5.95517Z" fill="black" />
@@ -572,7 +811,7 @@
                            Від 350 <span class="catalog-item__price--small">грн/т</span>
                         </p>
                      </div>
-                     <button class="catalog-item__button button button--square button--square-black">
+                     <button data-modal="product-modal" class="catalog-item__button button button--square button--square-black">
                         Детальніше
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.95514 5.95517C6.01319 5.89709 6.0821 5.85102 6.15796 5.81959C6.23381 5.78815 6.31512 5.77197 6.39723 5.77197C6.47934 5.77197 6.56064 5.78815 6.6365 5.81959C6.71235 5.85102 6.78127 5.89709 6.83931 5.95517L13.9226 13.0385C13.9824 13.0961 14.03 13.1651 14.0628 13.2413C14.0956 13.3175 14.1129 13.3996 14.1136 13.4825C14.1144 13.5655 14.0986 13.6478 14.0672 13.7247C14.0358 13.8015 13.9895 13.8713 13.9308 13.93C13.8722 13.9887 13.8024 14.0351 13.7256 14.0666C13.6488 14.0981 13.5665 14.1139 13.4835 14.1132C13.4005 14.1126 13.3185 14.0954 13.2422 14.0626C13.166 14.0299 13.097 13.9823 13.0393 13.9227L5.95598 6.83934C5.83893 6.72215 5.77319 6.5633 5.77319 6.39767C5.77319 6.23205 5.83893 6.07319 5.95598 5.95601L5.95514 5.95517Z" fill="black" />
@@ -600,7 +839,7 @@
                            Від 350 <span class="catalog-item__price--small">грн/т</span>
                         </p>
                      </div>
-                     <button class="catalog-item__button button button--square button--square-black">
+                     <button data-modal="product-modal" class="catalog-item__button button button--square button--square-black">
                         Детальніше
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.95514 5.95517C6.01319 5.89709 6.0821 5.85102 6.15796 5.81959C6.23381 5.78815 6.31512 5.77197 6.39723 5.77197C6.47934 5.77197 6.56064 5.78815 6.6365 5.81959C6.71235 5.85102 6.78127 5.89709 6.83931 5.95517L13.9226 13.0385C13.9824 13.0961 14.03 13.1651 14.0628 13.2413C14.0956 13.3175 14.1129 13.3996 14.1136 13.4825C14.1144 13.5655 14.0986 13.6478 14.0672 13.7247C14.0358 13.8015 13.9895 13.8713 13.9308 13.93C13.8722 13.9887 13.8024 14.0351 13.7256 14.0666C13.6488 14.0981 13.5665 14.1139 13.4835 14.1132C13.4005 14.1126 13.3185 14.0954 13.2422 14.0626C13.166 14.0299 13.097 13.9823 13.0393 13.9227L5.95598 6.83934C5.83893 6.72215 5.77319 6.5633 5.77319 6.39767C5.77319 6.23205 5.83893 6.07319 5.95598 5.95601L5.95514 5.95517Z" fill="black" />
@@ -628,7 +867,7 @@
                            Від 350 <span class="catalog-item__price--small">грн/т</span>
                         </p>
                      </div>
-                     <button class="catalog-item__button button button--square button--square-black">
+                     <button data-modal="product-modal" class="catalog-item__button button button--square button--square-black">
                         Детальніше
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.95514 5.95517C6.01319 5.89709 6.0821 5.85102 6.15796 5.81959C6.23381 5.78815 6.31512 5.77197 6.39723 5.77197C6.47934 5.77197 6.56064 5.78815 6.6365 5.81959C6.71235 5.85102 6.78127 5.89709 6.83931 5.95517L13.9226 13.0385C13.9824 13.0961 14.03 13.1651 14.0628 13.2413C14.0956 13.3175 14.1129 13.3996 14.1136 13.4825C14.1144 13.5655 14.0986 13.6478 14.0672 13.7247C14.0358 13.8015 13.9895 13.8713 13.9308 13.93C13.8722 13.9887 13.8024 14.0351 13.7256 14.0666C13.6488 14.0981 13.5665 14.1139 13.4835 14.1132C13.4005 14.1126 13.3185 14.0954 13.2422 14.0626C13.166 14.0299 13.097 13.9823 13.0393 13.9227L5.95598 6.83934C5.83893 6.72215 5.77319 6.5633 5.77319 6.39767C5.77319 6.23205 5.83893 6.07319 5.95598 5.95601L5.95514 5.95517Z" fill="black" />
@@ -698,7 +937,7 @@
                            <h3 class="delivery-bottom-item__title small-title small-title--size-36 small-title--white">
                               Автомобільним транспортом
                            </h3>
-                           <button class="delivery-bottom-item__button button">Детальніше</button>
+                           <button data-modal="delivery-car-modal" class="delivery-bottom-item__button button">Детальніше</button>
                         </div>
                      </div>
                      <div class="delivery-bottom-item-wrap section section--padding-type3">
@@ -710,7 +949,7 @@
                            <h3 class="delivery-bottom-item__title small-title small-title--size-36 small-title--white">
                               Залізничним транспортом
                            </h3>
-                           <button class="delivery-bottom-item__button button">Детальніше</button>
+                           <button data-modal="delivery-rail-modal" class="delivery-bottom-item__button button">Детальніше</button>
                         </div>
                      </div>
                   </div>
